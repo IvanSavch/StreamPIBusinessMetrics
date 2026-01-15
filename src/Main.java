@@ -28,5 +28,6 @@ public class Main {
 //        System.out.println(list);
         double sum = orderList.stream().filter(s -> s.getStatus().equals(OrderStatus.DELIVERED)).flatMap(o -> o.getItems().stream()).mapToDouble(OrderItem::getTotalPrice).sum();
         System.out.println(sum);
+        System.out.println();
     }
 }
